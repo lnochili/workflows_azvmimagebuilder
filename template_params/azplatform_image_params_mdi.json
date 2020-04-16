@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "imagetemplatename": {
-        "value": "ubuntuIgnite01"
+        "value": "ubuntumdi"
         },
         "api-version": {
             "value": "2019-05-01-preview"
@@ -33,7 +33,7 @@
           "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/ibLinuxGalleryRG/providers/Microsoft.Compute/images/"
         },
         "managedimagename": {
-          "value": "ubuntuignite08"
+          "value": "ubuntu-latest-mdi"
         },
         "destinationregion": {
           "value": "westcentralus"
