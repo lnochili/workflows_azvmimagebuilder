@@ -19,7 +19,7 @@ jobs:
     name: define parameters and create Azure Image Builder template
     runs-on: ubuntu-latest
     env: 
-      aib_template_name: "ubuntumsig"
+      aib_template_name: "ubuntusig"
       aib_resource_group: "iblinuxgalleryRG"
         
     steps:
