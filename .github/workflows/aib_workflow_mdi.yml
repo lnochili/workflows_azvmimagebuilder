@@ -11,7 +11,8 @@ on:
   #pull_request:
     #branches: [ master ]
  
-# workflow run is made up of steps to create and run Azure image builder to build custom images 
+# workflow run is to create and run Azure image builder to build custom images
+# inputs are imagebuilder ARM template file and parameters file  
 jobs:
   # This workflow contains a single job called "build"
   aib_template_job:
