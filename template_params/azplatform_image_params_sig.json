@@ -30,10 +30,10 @@
         "value": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/testscript.sh"
       },
         "galleryImageId": {
-          "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/iblinuxGalleryRG/providers/Microsoft.Compute/galleries/iblinuxGallery/images/UbuntuServer18.04"
+          "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/iblinuxGalleryRG/providers/Microsoft.Compute/galleries/iblinuxGallery/images/UbuntuLinux"
         },
         "sharedgalimagename": {
-          "value": "UbuntuServer18.04"
+          "value": "UbuntuLinux18.04"
         },
         "destinationregion": {
           "value": "westcentralus"
