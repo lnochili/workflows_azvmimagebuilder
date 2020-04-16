@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "imagetemplatename": {
-        "value": "ubuntuIgniteal01"
+        "value": "ubuntuIgnite01"
         },
         "api-version": {
             "value": "2019-05-01-preview"
