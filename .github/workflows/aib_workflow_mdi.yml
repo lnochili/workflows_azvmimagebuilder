@@ -14,7 +14,7 @@ on:
 # workflow run is to create and run Azure image builder to build custom images
 # inputs are imagebuilder ARM template file and parameters file  
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow contains a single job called aib_template
   aib_template_job:
     name: define parameters and create Azure Image Builder template
     runs-on: ubuntu-latest
