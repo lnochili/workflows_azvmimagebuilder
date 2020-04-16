@@ -1,0 +1,39 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Azure Image Builder workflow for shared gallery image distribution
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    paths:  [ .github/workflows/aib_workflow_sig.yml ] 
+    #branches: [ master ]
+  #pull_request:
+    #branches: [ master ]
+ 
+# Workflow run is to create custom image from platform image and publish to Shared image gallery
+# inputs are imagebuilder ARM template file and parameters file  
+jobs:
+  # This workflow contains a single job called aib_template
+  aib_template_job:
+    name: define parameters and create Azure Image Builder template
+    runs-on: ubuntu-latest
+    env: 
+      aib_template_name: "ubuntumsig"
+      aib_resource_group: "iblinuxgalleryRG"
+        
+    steps:
+      - name: 'Checkout Github Action'
+        uses: actions/checkout@master
+      - name: azure authentication
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: 'azure Image builder run to create managed image and publish to Shared image gallery'
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            curl https://raw.githubusercontent.com/lnochili/azvmimagebuilder/master/armTemplates/azplatform_image_deploy_sig.json > ./template_sig.json
+            az deployment group create --resource-group ${{ env.aib_resource_group }} --template-file ./template_sig.json --parameters @$GITHUB_WORKSPACE/template_params/azplatform_image_params_sig.json --name ${{ env.aib_template_name }}
+            az image builder run --resource-group ${{ env.aib_resource_group }}  --name ${{ env.aib_template_name }} 
+  
