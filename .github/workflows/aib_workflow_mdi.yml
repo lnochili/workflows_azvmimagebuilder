@@ -6,7 +6,7 @@ name: Azure Image Builder workflow for Managed image distribution
 # events but only for the master branch
 on:
   push:
-    paths:  [ .github/workflows/aib_workflow_mdi.yml ] 
+    paths:  [ ".github/workflows/aib_workflow_mdi.yml" , "template_params/azplatform_image_params_mdi.json"] 
     #branches: [ master ]
   #pull_request:
     #branches: [ master ]
