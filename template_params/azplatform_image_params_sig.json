@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "imagetemplatename": {
-      "value": ""
+      "value": "ubuntusig"
       },
       "api-version": {
           "value": "2019-05-01-preview"
@@ -30,10 +30,10 @@
         "value": "https://raw.githubusercontent.com/danielsollondon/azvmimagebuilder/master/testscript.sh"
       },
         "galleryImageId": {
-          "value": "/subscriptions/<subid>/resourceGroups/<rgname>/providers/Microsoft.Compute/galleries/<sharedImageGalName>/images/"
+          "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/ibLinuxGalleryRG/providers/Microsoft.Compute/images/"
         },
         "sharedgalimagename": {
-          "value": ""
+          "value": "UbuntuServer18.04"
         },
         "destinationregion": {
           "value": "westcentralus"
