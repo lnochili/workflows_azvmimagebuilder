@@ -7,7 +7,7 @@ name: Azure Image Builder workflow for shared gallery image distribution
 on:
   push:
     paths:  
-      [ ".github/workflows/aib_workflow_sig.yml", "template_params/azplatform_image_params_sig.json" ]
+      [ ".github/workflows/aib_workflow_sigmdi.yml", "template_params/azplatform_image_params_sigmdi.json" ]
     #branches: [ master ]
   #pull_request:
     #branches: [ master ]
