@@ -11,12 +11,6 @@
         "svclocation": {
             "value": "westcentralus"
         },
-        "sourceURI": {
-            "value": "https://9wgbnaj5vp8pqmwpu3ktjdea.blob.core.windows.net/vhds/b2a5ef50-bb75-4c49-ac4a-1c486a9735b8.vhd"
-          },
-        "sha256Checksum": {
-            "value": ""
-          },
         "publisher": {
           "value": "Canonical"
         },
@@ -37,9 +31,6 @@
         },
         "galleryImageId": {
           "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/iblinuxGalleryRG/providers/Microsoft.Compute/galleries/iblinuxGallery/images/UbuntuLinux"
-        },
-        "destinationresgroupid": {
-          "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/iblinuxGalleryRG"
         },
         "sharedgalimagename": {
           "value": "ubuntu-sigmdi"
