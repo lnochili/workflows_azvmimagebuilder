@@ -27,7 +27,7 @@
           "value": "18.04-LTS"
         },
         "version": {
-          "value": "18.04.201903060"
+          "value": "20.04.20201715"
         },
         "customizestepname": {
           "value": "RunTestScript"
