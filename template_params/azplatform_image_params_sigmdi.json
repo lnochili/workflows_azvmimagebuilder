@@ -48,13 +48,11 @@
           "value": "westcentralus"
         },
         "managedImageResGroupId": {
-          "type": "iblinuxgallyerRG"
+          "type": "iblinuxgalleryRG"
         },
         "managedimagename": {
           "value": "ubuntu-sigmdi"
         }
-    
-      }
-    
+     }
   }
        
