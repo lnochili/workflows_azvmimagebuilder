@@ -48,7 +48,7 @@
           "value": "westcentralus"
         },
         "managedImageResGroupId": {
-          "type": "iblinuxgalleryRG"
+          "type": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/iblinuxgalleryRG"
         },
         "managedimagename": {
           "value": "ubuntu-sigmdi"
