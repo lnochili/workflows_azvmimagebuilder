@@ -21,7 +21,7 @@
           "value": "18.04-LTS"
         },
         "version": {
-          "value": "20.04.20201715"
+          "value": "latest"
         },
         "customizestepname": {
           "value": "RunTestScript"
@@ -30,10 +30,10 @@
           "value": "https://raw.githubusercontent.com/lnochili/azvmimagebuilder/master/testscript.sh"
         },
         "galleryImageId": {
-          "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/iblinuxGalleryRG/providers/Microsoft.Compute/galleries/iblinuxGallery/images/UbuntuLinux"
+          "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/iblinuxGalleryRG/providers/Microsoft.Compute/galleries/iblinuxGallery"
         },
         "sharedgalimagename": {
-          "value": "ubuntu-sigmdi"
+          "value": "UbuntuLinux"
         },
         "destinationregion": {
           "value": "westcentralus"
