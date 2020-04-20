@@ -14,10 +14,21 @@
         "sourceURI": {
             "value": "https://9wgbnaj5vp8pqmwpu3ktjdea.blob.core.windows.net/vhds/b2a5ef50-bb75-4c49-ac4a-1c486a9735b8.vhd"
           },
-          "sha256Checksum": {
+        "sha256Checksum": {
             "value": ""
           },
-
+        "publisher": {
+          "value": "Canonical"
+        },
+        "offer": {
+          "value": "UbuntuServer"
+        },
+        "sku": {
+          "value": "18.04-LTS"
+        },
+        "version": {
+          "value": "18.04.201903060"
+        },
         "customizestepname": {
           "value": "RunTestScript"
         },
@@ -46,3 +57,4 @@
       }
     
   }
+       
