@@ -25,16 +25,16 @@
           "value": ""
         },
         "galleryImageId": {
-          "value": "/subscriptions/<subid>/resourceGroups/<rgname>/providers/Microsoft.Compute/galleries/<sharedImageGalName>/images/"
+          "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/iblinuxGalleryRG/providers/Microsoft.Compute/galleries/iblinuxGallery/images/UbuntuLinux"
         },
         "destinationresgroupid": {
-          "value": "/subscriptions/<subid>/resourceGroups/<rgname>/providers/Microsoft.Compute/images/"
+          "value": "/subscriptions/a87c004e-36b1-4eef-b8f3-ec8a539d10ea/resourceGroups/iblinuxGalleryRG"
         },
         "managedimagename": {
-          "value": ""
+          "value": "ubuntu-sigmdi"
         },
         "sharedgalimagename": {
-          "value": ""
+          "value": "ubuntu-sigmdi"
         },
         "destinationregion": {
           "value": "westcentralus"
