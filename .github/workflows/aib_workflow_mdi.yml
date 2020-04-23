@@ -21,6 +21,8 @@ jobs:
     env: 
       aib_template_name: "ubuntumdi"
       aib_resource_group: "iblinuxgalleryRG"
+      aib_source_template: 'https://raw.githubusercontent.com/lnochili/azvmimagebuilder/master/armTemplates/azplatform_image_deploy_mdi.json'
+      aib_template_params: $GITHUB_WORKSPACE/template_params/azplatform_image_params_mdi.json
         
     steps:
       - name: 'Checkout Github Action'
@@ -33,8 +35,8 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            curl https://raw.githubusercontent.com/lnochili/azvmimagebuilder/master/armTemplates/azplatform_image_deploy_mdi.json > ./template_mdi.json
-            az deployment group create --resource-group ${{ env.aib_resource_group }} --template-file ./template_mdi.json --parameters @$GITHUB_WORKSPACE/template_params/azplatform_image_params_mdi.json --name ${{ env.aib_template_name }}
+            curl {{ env.source_template }} > ./template_mdi.json
+            az deployment group create --resource-group ${{ env.aib_resource_group }} --template-file ./template_mdi.json --parameters @{{ env.aib_template_params }} --name ${{ env.aib_template_name }}
             az image builder run --resource-group ${{ env.aib_resource_group }}  --name ${{ env.aib_template_name }} 
   
             
