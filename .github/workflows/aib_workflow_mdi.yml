@@ -41,9 +41,10 @@ jobs:
         with:
           inlineScript: |
             aib_template_file=${{ env.aib_source_template }}
-            if [[ $aib_template_file =~ ^[http:] ]] 
+            if [[ $aib_template_file =~ ^[http] ]] 
             then 
-              curl -p $aib_template_file > ./template_mdi.json
+              curl $aib_template_file > ./template_mdi.json
             fi  
+            cat ./template_mdi.json
             az deployment group create --resource-group ${{ env.aib_resource_group }} --template-file $aib_template_file --parameters @{{ env.aib_template_params }} --name ${{ env.aib_template_name }}
             az image builder run --resource-group ${{ env.aib_resource_group }}  --name ${{ env.aib_template_name }} 
