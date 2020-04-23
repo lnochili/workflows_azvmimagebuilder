@@ -3,7 +3,9 @@
 name: Azure Image Builder workflow for Managed image distribution
 
 # Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Currently configured to run when there is commit event on the workflow file or the parameters file.
+# Add/modify based on the requirement
+#Section - Triggers
 on:
   push:
     paths:  [ ".github/workflows/aib_workflow_mdi.yml" , "template_params/azplatform_image_params_mdi.json"] 
@@ -12,16 +14,19 @@ on:
     #branches: [ master ]
  
 # workflow run is to create and run Azure image builder to build custom images
-# inputs are imagebuilder ARM template file and parameters file  
+# Workflow requires inputs listed as variables under "env" 
+
 jobs:
   # This workflow contains a single job called aib_template to create Managed Image
   aib_template_job:
     name: define parameters and create Azure Image Builder template
     runs-on: ubuntu-latest
     env: 
-      aib_template_name: "ubuntumdi"
-      aib_resource_group: "iblinuxgalleryRG"
+      aib_template_name: "ubuntumdi"  ## update the value in quotes
+      aib_resource_group: "iblinuxgalleryRG" ## update the value in quotes
+      # Update the path for your ARM template else use the one as given below
       aib_source_template: 'https://raw.githubusercontent.com/lnochili/azvmimagebuilder/master/armTemplates/azplatform_image_deploy_mdi.json'
+      # Update the path for parameters file in your repository (relative path to the root of the repo )
       aib_template_params: $GITHUB_WORKSPACE/template_params/azplatform_image_params_mdi.json
         
     steps:
@@ -35,7 +40,7 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            curl {{ env.source_template }} > ./template_mdi.json
+            curl {{ env.aib_source_template }} > ./template_mdi.json
             az deployment group create --resource-group ${{ env.aib_resource_group }} --template-file ./template_mdi.json --parameters @{{ env.aib_template_params }} --name ${{ env.aib_template_name }}
             az image builder run --resource-group ${{ env.aib_resource_group }}  --name ${{ env.aib_template_name }} 
   
