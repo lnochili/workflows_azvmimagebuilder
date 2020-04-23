@@ -14,7 +14,7 @@ List of workflows available:
   2. *_sig.yml for ubnuntu custom image from Managed Image and distributed to shared image gallery
   3. *_sigmdi.yml for ubuntu custom image from Platform image, distributed as both managed image and to shared image gallery
   
-## how to use it 
+## How to use it 
 The workflows use standard ARM templates defined for various scenarios in https://github.com/lnochili/azvmimagebuilder/tree/master/armTemplates. 
   - Import the workflow file (e.g. aib_workflow_mdi.yml) into your repo under ./.githubrc/workflows
   - Update the triggers section to initiate the workflow as per your requiment
