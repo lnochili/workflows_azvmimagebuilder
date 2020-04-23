@@ -1,6 +1,6 @@
 # Github Workflows for Azure Image Builder
 
-Welcome to the Github workflows for Image Builder using ARM templates
+Welcome to Sample Github workflows for Image Builder using ARM templates
 
 ## Purpose
 
