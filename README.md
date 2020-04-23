@@ -15,7 +15,7 @@ List of workflows available:
   3. *_sigmdi.yml for ubuntu custom image from Platform image, distributed as both managed image and to shared image gallery
   
 ## How to use it 
-The workflows use standard ARM templates defined for various scenarios in https://github.com/lnochili/azvmimagebuilder/tree/master/armTemplates. 
+Github workflows in this repo use standard ARM templates defined for various scenarios in https://github.com/lnochili/azvmimagebuilder/tree/master/armTemplates. 
   - Import the workflow file (e.g. aib_workflow_mdi.yml) into your repo under ./.githubrc/workflows
   - Update the triggers section to initiate the workflow as per your requiment
   - Import the respective parameters file (e.g. azplatform_image_params_mdi.json) from ./template_params directory into your repo
