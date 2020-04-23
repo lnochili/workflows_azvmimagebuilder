@@ -44,6 +44,8 @@ jobs:
             if [[ $aib_template_file =~ ^[http] ]] 
             then 
               curl $aib_template_file > ./template_mdi.json
+            else
+              cat $aib_template_file > ./template_mdi.json
             fi  
-            az deployment group create --resource-group ${{ env.aib_resource_group }} --template-file ./template_mdi.json --parameters @{{ env.aib_template_params }} --name ${{ env.aib_template_name }}
+            az deployment group create --resource-group ${{ env.aib_resource_group }} --template-file ./template_mdi.json --parameters @${{ env.aib_template_params }} --name ${{ env.aib_template_name }}
             az image builder run --resource-group ${{ env.aib_resource_group }}  --name ${{ env.aib_template_name }} 
