@@ -40,7 +40,7 @@ jobs:
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            curl {{ env.aib_source_template }} > ./template_mdi.json
+            curl ${{ env.aib_source_template }} > ./template_mdi.json
             az deployment group create --resource-group ${{ env.aib_resource_group }} --template-file ./template_mdi.json --parameters @{{ env.aib_template_params }} --name ${{ env.aib_template_name }}
             az image builder run --resource-group ${{ env.aib_resource_group }}  --name ${{ env.aib_template_name }} 
   
